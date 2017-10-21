@@ -10,7 +10,7 @@
         android:id="@+id/myName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/susmita_expandablelistview"
         android:layout_above="@+id/goToMain"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"/>
@@ -19,7 +19,7 @@
         android:id="@+id/goToMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/expandable_view"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 

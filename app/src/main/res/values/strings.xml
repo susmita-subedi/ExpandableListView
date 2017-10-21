@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CitiRewards</string>
+    <string name="expandable_view">Expandable View</string>
+    <string name="susmita_expandablelistview">Susmita_ExpandableListView</string>
 </resources>
