@@ -1,11 +1,14 @@
 package com.android.susmita.citirewards;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.susmita.citirewards.dto.StatementMonths;
 import com.android.susmita.citirewards.dto.StatementResponse;
@@ -23,7 +26,10 @@ import java.util.Map;
  */
 
 public class MyExpandableAdapter extends BaseExpandableListAdapter {
+    ImageView arrow_up;
+    ImageView arrow_down;
     Context context;
+    String TAG = "myCustomAdapter";
     List<String> yearsList;
     Map<String, List<String>> statementMonthsMap;
 
@@ -90,18 +96,29 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter {
         }
         TextView txtYears = (TextView)view.findViewById(R.id.tv_years);
         txtYears.setText(year);
+
+        ImageView arrowDown = view.findViewById(R.id.arrowdown);
+        ImageView arrowUp = view.findViewById(R.id.arrowup);
+
+
         return view;
     }
 
     @Override
-    public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        String topic = (String) getChild(i, i1);
+    public View getChildView(int i, int i1, boolean selected, View view, ViewGroup viewGroup) {
+        String month = (String) getChild(i, i1);
+
         if (view == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.statement_months, null);
         }
         TextView txtMonths = (TextView)view.findViewById(R.id.tvmonths);
-        txtMonths.setText(topic);
+        txtMonths.setText(month);
+
+
+
+
+//        Type viewType = yearsList.get(i).type;
         return view;
     }
 

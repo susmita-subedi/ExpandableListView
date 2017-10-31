@@ -8,6 +8,16 @@ import java.util.ArrayList;
 
 public class Statements {
     private String year;
+
+    public boolean isExpanded() {
+        return expanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
+
+    private boolean expanded;
     private ArrayList<StatementMonths> statementMonths;
 
     public String getYear() {

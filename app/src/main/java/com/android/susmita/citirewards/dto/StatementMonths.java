@@ -7,6 +7,7 @@ package com.android.susmita.citirewards.dto;
 public class StatementMonths {
     private String statementDate;
     private String month;
+    private boolean selected;
 
     public String getStatementDate() {
         return statementDate;
@@ -22,5 +23,13 @@ public class StatementMonths {
 
     public void setMonth(String month) {
         this.month = month;
+    }
+
+    public boolean getIsSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

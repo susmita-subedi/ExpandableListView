@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/tv_years"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:text="TextView"
+
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
         android:textColor="#000000"
-        android:text="TextView"/>
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/arrowdown"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/arrow_down"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/arrowup"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center"
+        android:src="@drawable/arrow_up"
+        android:visibility="gone"/>
 </LinearLayout>
